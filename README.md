@@ -12,17 +12,25 @@ A FastAPI-based chatbot that simulates an AI sales assistant for Northstar One, 
 6. open http://localhost:8000
 
 ## Project structure
-- `app/main.py` - FastAPI app with /chat and /end-session routes
-- `app/prompt.py` - SYSTEM_PROMPT constant (loaded from PROMPT.md)
-- `app/tools.py` - tool JSON schemas + simulate_booking()
-- `app/llm.py` - Groq client wrapper: chat call + analytics call
-- `app/memory.py` - in-memory session store
-- `app/static/index.html` - chat UI
-- `tests/test_cases.md` - scenarios: input / expected / actual output
-- `PROMPT.md` - standalone copy of the Part 2 prompt
-- `requirements.txt` - Python dependencies
-- `.env.example` - environment variable template
-- `.gitignore` - Git ignore patterns
+```
+northstar-one-agent/
+├── app/
+│   ├── __init__.py          # Package initializer
+│   ├── main.py              # FastAPI app with /chat and /end-session routes
+│   ├── prompt.py            # SYSTEM_PROMPT constant (loaded from PROMPT.md)
+│   ├── tools.py             # Tool JSON schemas + simulate_booking()
+│   ├── llm.py               # Groq client wrapper with model fallback
+│   ├── memory.py            # In-memory session store
+│   └── static/
+│       └── index.html       # Chat UI (text-only)
+├── tests/
+│   └── test_cases.md        # Test scenarios with input/expected/actual output
+├── PROMPT.md                # System prompt for Riya (AI sales assistant)
+├── README.md                # This file
+├── requirements.txt         # Python dependencies
+├── .env.example             # Environment variable template
+└── .gitignore               # Git ignore patterns
+```
 
 ## Key assumptions
 - Prices are fixed exactly as given in the assignment; no other project data
