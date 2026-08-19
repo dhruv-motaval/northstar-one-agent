@@ -52,7 +52,8 @@ northstar-one-agent/
 - No auth, no rate limiting — out of scope for a take-home demo.
 
 ## AI tools used
-This implementation was built with Kiro (AI-powered development environment). The spec and prompt were provided in the assignment, and the code was generated following those specifications exactly. All code was reviewed and tested before submission.
+- **Kiro Extension**: Used for code generation and development assistance
+- **OmniRoute**: Used for multi-provider LLM access and model routing (supports Groq, OpenAI, and other providers with automatic fallback)
 
 ## Test cases
 See tests/test_cases.md
